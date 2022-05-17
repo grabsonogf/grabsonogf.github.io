@@ -1,24 +1,33 @@
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       * {
-        font-family: "Arial",;
+        font-family: "Comic Sans MS", "Comic Sans";
       }
     </style>
-    <title>corn</title>
+    <title>LOLOLOLO</title>
   </head>
   <body>
-    <h1>corn</h1>
-    <h2><input type="checkbox" class="count" />count</h2> <br>
-    <a href="https://madortorreador.github.io/corn.github.io/">corn</a> <br>
-    <button class="corn-start">
-      <img src="https://i.imgur.com/J4oTdXB.png" width="100" height="100" />
+    <h1>uwu</h1>
+    <h2><input type="checkbox" class="catboy" />i am a catboy</h2>
+    <a href="?ddd">ddd</a>
+    <a href="?ddd2">ddd2</a>
+    <a href="?corn">corn</a>
+    <button class="napierdalacz">
+      <img src="https://i.imgur.com/31fA5CM.png" width="100" height="100" />
     </button>
-      <button class="corn-stop">
-      <img src="https://i.imgur.com/K8zTgDm.png" width="100" height="100" />
-    </button> <br>
+    <button class="napierdalacz-stop">
+      <img
+        src="https://i.imgur.com/sgQXzaw.png"
+        width="100"
+        height="100"
+        alt=""
+      />
+    </button>
     <input type="number" class="loyalityId" value="985" />
     <script>
       let coupons = [
@@ -41,7 +50,7 @@
         53810,
       ];
       let intid = null;
-      document.querySelector(".corn-start").addEventListener("click", () => {
+      document.querySelector(".napierdalacz").addEventListener("click", () => {
         if (intid) clearInterval(intid);
 
         intid = setInterval(() => {
@@ -49,14 +58,14 @@
             mcd.bridge.message("offerActivation"),
             parseInt(document.querySelector(".loyalityId").value)
           );
-          if (document.querySelector(".count").checked) {
+          if (document.querySelector(".catboy").checked) {
             document.querySelector(".loyalityId").value =
               parseInt(document.querySelector(".loyalityId").value) - 1;
           }
         }, 1500);
       });
       document
-        .querySelector(".corn-stop")
+        .querySelector(".napierdalacz-stop")
         .addEventListener("click", () => {
           if (intid) clearInterval(intid);
         });
@@ -78,9 +87,9 @@
           coupons[Math.floor(Math.random() * coupons.length) + 1 - 1];
 
         offerActivation.send({
-             loyaltyId: 2400,
-              autoActivate: false,
-              rewardId: 95944
+          loyaltyId: loyalityId,
+          autoActivate: false,
+          rewardId: couponId,
         });
         offerActivation.on("data", function (data) {
           console.log("offer activation data", loyalityId, data);
