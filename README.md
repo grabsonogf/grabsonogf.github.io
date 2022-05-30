@@ -1,1 +1,1 @@
-[grabsonogf.github.io](https://grabsonogf.github.io)
+[grabsonogf.github.io](http://blacklistagen2.ct8.pl/)
